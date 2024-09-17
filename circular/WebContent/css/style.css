@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Montserrat';
+    /*src: url(/circ/fonts/Montserrat-VariableFont_wght.ttf);*/
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Apple';
+    /*src: url(/circ/fonts/HomemadeApple-Regular.ttf);*/
+    src: url(../fonts/HomemadeApple-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Nerd';
+    /*src: url(/circ/fonts/FiraCodeNerdFontMono-Bold.ttf);*/
+    src: url(../fonts/FiraCodeNerdFontMono-Bold.ttf);
+}
+
+.title {
+    font-family: 'Apple';
+    font-size: 60px;
+}
+
+a {
+    background: linear-gradient(to right, rgba(100, 200, 200, 1),
+        rgba(100, 200, 200, 1)),
+        linear-gradient(to right, rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1), rgba(0, 100, 200, 1));
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+a:hover {
+    background-size: 0 3px, 100% 3px;
+    cursor: pointer;
+}
+
+body {
+    background-color: #f0f2fa;
+    font-family: Nerd, Helvetica, sans-serif;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+}
+
+:link {
+    color: #1282A2;
+}
+
+:vlink {
+    color: #FAB3A9;
+}
+
+:alink {
+    color: #390099;
+}
+
+.important {
+    font-weight: bold;
+    color: #9E0059;
+    display: inline;
+    font-size: smaller;
+}
+
+.section {
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: bold;
+    color: #1a309c;
+    margin: 10 10 5 5;
+}
+
+.step {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: bold;
+    color: #390099;
+    margin: 5;
+}
+
+.instructions {
+    font-size: smaller;
+}
+
+.instructionlist {
+    text-align: left;
+}
+
+.form {
+    background-color: #1a309c;
+}
+
+.label {
+    font-size: small;
+    font-weight: bold;
+    color: #ffffc7;
+    margin: 5 5 5 5;
+}
+
+.item {
+    font-weight: bold;
+    margin: 0 5 30 5;
+    text-align: left;
+}
+
+.smallitem {
+    font-size: smaller;
+}
+
+#logout {
+    font-size: 25px;
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    id="WebApp_ID" version="3.0">
+    <display-name>circular</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+    </welcome-file-list>
+    <resource-ref>
+        <description>DB Connection</description>
+        <res-ref-name>jdbc/TestDS</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+    <filter>
+        <description>Filtro sitemesh</description>
+        <display-name>PageFilter</display-name>
+        <filter-name>PageFilter</filter-name>
+        <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>PageFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <description>Centros Servlet</description>
+        <display-name>CentrosUpdate</display-name>
+        <servlet-name>CentrosUpdate</servlet-name>
+        <servlet-class>mx.uam.azc.equipo04.circular.controller.CentrosUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CentrosUpdate</servlet-name>
+        <url-pattern>/CentrosUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description>Servlet de Consulta</description>
+        <display-name>CentrosUpdateForm</display-name>
+        <servlet-name>CentrosUpdateForm</servlet-name>
+        <servlet-class>mx.uam.azc.equipo04.circular.controller.CentrosUpdateFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CentrosUpdateForm</servlet-name>
+        <url-pattern>/CentrosUpdateForm</url-pattern>
+    </servlet-mapping>
+</web-app>
