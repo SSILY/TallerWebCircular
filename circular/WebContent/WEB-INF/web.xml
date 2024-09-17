@@ -48,4 +48,24 @@
         <servlet-name>CentrosUpdateForm</servlet-name>
         <url-pattern>/CentrosUpdateForm</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <description>Servlet de Consulta de cliente</description>
+        <display-name>ClienteForm</display-name>
+        <servlet-name>ClienteForm</servlet-name>
+        <servlet-class>mx.uam.azc.equipo04.circular.controller.ClienteFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClienteForm</servlet-name>
+        <url-pattern>/ClienteForm</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description>Servlet para exportar a XLS</description>
+        <display-name>ClienteFormXls</display-name>
+        <servlet-name>ClienteFormXls</servlet-name>
+        <servlet-class>mx.uam.azc.equipo04.circular.controller.ClienteFormXlsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClienteFormXls</servlet-name>
+        <url-pattern>/ClienteFormXls</url-pattern>
+    </servlet-mapping>
 </web-app>

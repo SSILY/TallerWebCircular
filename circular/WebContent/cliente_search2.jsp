@@ -82,6 +82,9 @@
                     <div class="label">PDF</div>
                 </td>
                 <td align="center">
+                    <div class="label">HTML</div>
+                </td>
+                <td align="center">
                     <div class="label">XLS</div> <sql:query
                         var="resultados" dataSource="jdbc/TestDS">
                 SELECT * FROM clientes WHERE nombre LIKE ? 
@@ -93,13 +96,15 @@
                             <td align="center">${ fila.nombre }</td>
                             <td align="center">${ fila.direccion }</td>
                             <td align="center"><input type="button"
-                                value="  Ver  "
-                                onclick="window.location='cliente_view.jsp'">
-                            </td>
+                                value="Ver"
+                                onclick="window.location='ClienteForm?llave=${fila.cliente_id}'">
                             <td align="center"><input type="button"
-                                value="  Ver como PDF  "></td>
+                                value="PDF"></td>
                             <td align="center"><input type="button"
-                                value="  Ver como XLS  "></td>
+                                value="HTML"></td>
+                            <td align="center"><input type="button"
+                                value="XLS"
+                                onclick="window.location='ClienteFormXls?llave=${fila.cliente_id}'"></td>
                         </tr>
                     </c:forEach>
         </table>
